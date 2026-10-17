@@ -10,11 +10,11 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Office AI Copilot" />
   <Description DefaultValue="Unified AI assistant for Microsoft Word, Excel, and PowerPoint with OpenAI, Gemini, Claude, and OpenRouter." />
-  <IconUrl DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/" />
+  <IconUrl DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/" />
   <AppDomains>
-    <AppDomain>https://theeducatorsnn-sys.github.io</AppDomain>
+    <AppDomain>https://harisjamal2k18.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />
@@ -22,7 +22,7 @@
     <Host Name="Presentation" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/index.html" />
+    <SourceLocation DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/index.html" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 
@@ -151,13 +151,13 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16" DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/assets/icon-16.png" />
-        <bt:Image id="Icon.32" DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/assets/icon-32.png" />
-        <bt:Image id="Icon.80" DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/assets/icon-80.png" />
+        <bt:Image id="Icon.16" DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/assets/icon-16.png" />
+        <bt:Image id="Icon.32" DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/assets/icon-32.png" />
+        <bt:Image id="Icon.80" DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://theeducatorsnn-sys.github.io/office-gemini-addin/index.html" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://harisjamal2k18.github.io/MS-Office-Add-in/index.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Welcome to Office AI Copilot" />
