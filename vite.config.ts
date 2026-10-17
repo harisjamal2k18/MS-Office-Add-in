@@ -19,7 +19,7 @@ const httpsConfig = hasDevCerts
 
 export default defineConfig({
   // Base URL path required for GitHub Pages deployment under your repository name
-  base: '/MS-Office-Add-in/',
+  base: './MS-Office-Add-in/',
   plugins: hasDevCerts ? [] : [basicSsl()],
   server: {
     port: 3005,
