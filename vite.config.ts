@@ -18,6 +18,8 @@ const httpsConfig = hasDevCerts
   : true;
 
 export default defineConfig({
+  // Base URL path required for GitHub Pages deployment under your repository name
+  base: '/MS-Office-Add-in/',
   plugins: hasDevCerts ? [] : [basicSsl()],
   server: {
     port: 3005,
@@ -36,9 +38,16 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
     rollupOptions: {
       input: {
         taskpane: resolve(__dirname, 'index.html')
+      },
+      output: {
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   }
