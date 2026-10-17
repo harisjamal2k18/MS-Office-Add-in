@@ -1,0 +1,31 @@
+{
+  "name": "office-ai-unified-addin",
+  "version": "1.0.0",
+  "description": "Production-ready Microsoft Office AI Add-in for Word, Excel, and PowerPoint",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "server": "tsx watch server/index.ts",
+    "clean-ports": "powershell -Command \"Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000,3001,3005,3006 -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue\"",
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "validate": "office-addin-manifest validate genai-manifest.xml"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.9",
+    "@types/office-js": "^1.0.443",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0"
+  }
+}
