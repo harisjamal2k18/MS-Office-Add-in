@@ -169,12 +169,13 @@ To use newly released models (e.g. `meta-llama/llama-3.3-70b-instruct` or a cust
 
 ## 🚢 Production Deployment
 
-1. Build the production assets:
-   ```bash
+1. Deploy the Express proxy (`server/index.ts`) to a Node.js host that provides a public HTTPS URL. GitHub Pages is static hosting and cannot run this server.
+2. Set `VITE_API_BASE_URL` to that proxy's public origin before building (for example, `https://your-api-host.example.com`). On PowerShell:
+   ```powershell
+   $env:VITE_API_BASE_URL = "https://your-api-host.example.com"
    npm run build
    ```
-   This generates the optimized bundle in `dist/`.
-2. Host the `dist/` static files on any HTTPS-enabled server or cloud platform (e.g., Azure Static Web Apps, AWS S3/CloudFront, Cloudflare Pages, Vercel, or Nginx).
-3. Deploy the backend proxy (`server/index.ts`) to Azure App Service, AWS ECS, or Render, and update CORS origins to match your domain.
-4. Update `genai-manifest.xml` replacing `https://localhost:3000` with your production HTTPS URL.
-5. Deploy the manifest organization-wide via the **Microsoft 365 Admin Center** (Settings -> Integrated Apps -> Upload custom apps) so all users in your organization receive the Add-in automatically across Word, Excel, and PowerPoint.
+   This generates the optimized bundle in `dist/`, with API requests directed to your proxy. Verify `https://your-api-host.example.com/api/health` returns JSON before deploying.
+3. Host the contents of `dist/` on HTTPS (for example, GitHub Pages, Azure Static Web Apps, AWS S3/CloudFront, Cloudflare Pages, Vercel, or Nginx).
+4. Configure the proxy's CORS policy to allow your frontend origin, then ensure the manifest's taskpane URL points to the deployed `dist/index.html`.
+5. Deploy the updated manifest via the **Microsoft 365 Admin Center** (Settings -> Integrated Apps -> Upload custom apps) so users receive the latest add-in configuration.

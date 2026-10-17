@@ -18,8 +18,9 @@ const httpsConfig = hasDevCerts
   : true;
 
 export default defineConfig({
-  // Base URL path required for GitHub Pages deployment under your repository name
-  base: './MS-Office-Add-in/',
+  // Office task panes must load assets relative to the manifest URL.
+  // Using './' keeps the add-in working when hosted from GitHub Pages or a local/shared manifest path.
+  base: './',
   plugins: hasDevCerts ? [] : [basicSsl()],
   server: {
     port: 3005,
