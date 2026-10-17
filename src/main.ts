@@ -12,6 +12,15 @@ import { HistoryModalComponent } from './components/HistoryModal.ts';
 import { ToastComponent } from './components/Toast.ts';
 import { ChatService } from './services/chatService.ts';
 
+// @ts-ignore CSS side-effect imports resolved relative to src/main.ts
+import './styles/theme.css';
+// @ts-ignore CSS side-effect imports resolved relative to src/main.ts
+import './styles/layout.css';
+// @ts-ignore CSS side-effect imports resolved relative to src/main.ts
+import './styles/chat.css';
+// @ts-ignore CSS side-effect imports resolved relative to src/main.ts
+import './styles/components.css';
+
 declare const Office: any;
 
 async function bootstrap() {
